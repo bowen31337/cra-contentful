@@ -18,7 +18,7 @@ export const useHome = (query: string) => {
       const {
         javascriptTutorialCollection: { items },
       } = data;
-        setData(items);
+      setData(items);
     } catch (e: unknown) {
       setErrorMsg((e as Error)?.message);
     } finally {
