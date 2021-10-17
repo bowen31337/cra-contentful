@@ -57,11 +57,3 @@ const mockData = {
     },
   },
 };
-
-const mockEmptyData = {
-  data: {
-    javascriptTutorialCollection: {
-      items: [],
-    },
-  },
-};
