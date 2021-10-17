@@ -5,12 +5,12 @@ import { PageItem, HomeDataResponseProps } from "./";
 export const useHome = (query: string) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [errorMsg, setErrorMsg] = useState<string>("");
-  const [data, setData] = useState<PageItem>({});
+  const [data, setData] = useState<PageItem[]>([]);
 
   const fetchHomeData = async (query: string) => {
     setIsLoading(true);
     setErrorMsg("");
-    setData({});
+    setData([]);
     try {
       const res = await fetchContentfulSpaceData(query);
 
@@ -18,11 +18,7 @@ export const useHome = (query: string) => {
       const {
         javascriptTutorialCollection: { items },
       } = data;
-      if (items?.length > 0) {
-        setData(items[0]);
-      } else {
-        throw new Error("No data found");
-      }
+        setData(items);
     } catch (e: unknown) {
       setErrorMsg((e as Error)?.message);
     } finally {

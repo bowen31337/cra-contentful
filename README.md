@@ -7,6 +7,7 @@
 - Customer Hooks and Unit tests
 - Scaffolded by CRA
 - Proxy in DEV Mode
+- React Routes
 
 
 # Pre-Requirement

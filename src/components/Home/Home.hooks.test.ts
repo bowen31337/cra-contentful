@@ -21,7 +21,7 @@ describe("Home Hooks", () => {
         await waitForNextUpdate();
 
         expect(result.current.isLoading).toBe(false);
-        expect(result.current.data).toEqual({ title: "JavaScript Fundamentals" });
+        expect(result.current.data).toEqual([{ title: "JavaScript Fundamentals" }]);
       });
     });
 
@@ -41,25 +41,6 @@ describe("Home Hooks", () => {
 
         expect(result.current.isLoading).toBe(false);
         expect(result.current.errorMsg).toBe("Server Error");
-      });
-
-      it("should get error msg with no result on 20x response", async () => {
-        global.fetch = jest
-          .fn()
-          .mockResolvedValueOnce({
-            json: () => Promise.resolve(mockEmptyData),
-          });
-        const { result, waitForNextUpdate } = renderHook(() =>
-          useHome("queryString")
-        );
-
-        expect(result.current.isLoading).toBe(true);
-        expect(result.current.errorMsg).toBe("");
-
-        await waitForNextUpdate();
-
-        expect(result.current.isLoading).toBe(false);
-        expect(result.current.errorMsg).toBe("No data found");
       });
     });
   });

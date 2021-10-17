@@ -17,9 +17,13 @@ const Home = () => {
   }
 
   if( errorMsg !== '') {
-      return <p>Oops, error!</p>
+      return <p>{errorMsg}</p>
   }
 
-  return (<h1>{data.title}</h1>)
+  if(data.length === 0) {
+      return <h1>No Data Found.</h1>
+  }
+
+  return (<h1>{data[0]?.title}</h1>)
 };
 export default Home;
