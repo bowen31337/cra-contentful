@@ -1,20 +1,21 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { fetchContentfulSpaceData } from "../../utils";
-import { PageItem, HomeDataResponseProps } from "./";
+import { ListDataResponseProps, ListItem } from "./";
 
-export const useHome = (query: string) => {
+export const useList = (query: string) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [errorMsg, setErrorMsg] = useState<string>("");
-  const [data, setData] = useState<PageItem[]>([]);
 
-  const fetchHomeData = async (query: string) => {
+  const [data, setData] = useState<ListItem[]>([]);
+
+  const fetchListData = async (query: string) => {
     setIsLoading(true);
     setErrorMsg("");
     setData([]);
     try {
       const res = await fetchContentfulSpaceData(query);
 
-      const { data }: { data: HomeDataResponseProps } = await res.json();
+      const { data }: { data: ListDataResponseProps } = await res.json();
       const {
         dataset2Collection: { items },
       } = data;
@@ -26,8 +27,8 @@ export const useHome = (query: string) => {
     }
   };
   useEffect(() => {
-    fetchHomeData(query);
+    fetchListData(query);
   }, [query]);
 
-  return { isLoading, fetchHomeData, data, errorMsg };
+  return { isLoading, fetchListData, data, errorMsg };
 };
