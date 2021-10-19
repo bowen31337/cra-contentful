@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
-import { useFilter } from ".";
+import { useFilter, FilterStyled } from ".";
 import { List } from "../List";
 import { uniqBy } from "../../utils";
 
@@ -65,27 +65,29 @@ const Filter = () => {
   const categories = uniqBy(data, (item) => item.type);
 
   return (
-    <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
-      <Tabs
-        value={value}
-        onChange={handleChange}
-        variant="scrollable"
-        scrollButtons
-        allowScrollButtonsMobile
-        aria-label="scrollable filter tabs"
-        centered
-      >
-        {categories.map(({ type, id }) => (
-          <Tab label={type} key={id} />
-        ))}
-      </Tabs>
+    <FilterStyled>
+      <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          variant="scrollable"
+          scrollButtons
+          allowScrollButtonsMobile
+          aria-label="scrollable filter tabs"
+          centered
+        >
+          {categories.map(({ type, id }) => (
+            <Tab label={type} key={id} />
+          ))}
+        </Tabs>
 
-      {categories.map(({ type, id }, index) => (
-        <TabPanel value={value} index={index} key={id}>
-          <List type={type} />
-        </TabPanel>
-      ))}
-    </Box>
+        {categories.map(({ type, id }, index) => (
+          <TabPanel value={value} index={index} key={id}>
+            <List type={type} />
+          </TabPanel>
+        ))}
+      </Box>
+    </FilterStyled>
   );
 };
 

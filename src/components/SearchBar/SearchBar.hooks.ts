@@ -1,17 +1,15 @@
 import { useState } from "react";
 import { fetchContentfulSpaceData } from "../../utils";
-import { ListDataResponseProps, ListItem } from "./";
+import { ListDataResponseProps, ListItem } from "../List";
 
-export const useList = () => {
+export const useSearch = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [errorMsg, setErrorMsg] = useState<string>("");
   const [page, setPage] = useState<number>(1);
 
   const [data, setData] = useState<ListItem[]>([]);
 
-  
-
-  const fetchListData = async (query: string) => {
+  const search = async (query: string) => {
     setIsLoading(true);
     setErrorMsg("");
     setData([]);
@@ -30,5 +28,5 @@ export const useList = () => {
     }
   };
 
-  return { isLoading, fetchListData, data, errorMsg, page, setPage };
+  return { isLoading, search, data, errorMsg, page, setPage };
 };

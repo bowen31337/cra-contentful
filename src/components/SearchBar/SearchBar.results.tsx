@@ -1,15 +1,17 @@
-import { useList, ListProps, ListItem } from ".";
-import { Card } from "../Card";
-import "./List.styles.css";
-import { CONSTANTS } from "../../utils";
 import { useEffect, useState } from "react";
-
-const constructQuery = (type: string, page: number = 1) => `
+import { Card } from "../Card";
+import { CONSTANTS } from "../../utils";
+import { SearchListProps, useSearch } from "./";
+import { ListItem } from "../List";
+const constructQuery = (query: string, page: number = 1) => `
 {
     dataset2Collection(limit: ${CONSTANTS.PAGE_SIZE}, skip: ${
   (page - 1) * CONSTANTS.PAGE_SIZE
 }, where:{
-      type: "${type}"
+      OR: [
+          {description_contains: "${query}" },
+          {title_contains: "${query}" }
+      ]
     }) {
       items{
         type,
@@ -24,10 +26,10 @@ const constructQuery = (type: string, page: number = 1) => `
   }
 `;
 
-const List = (props: ListProps) => {
-  const { type } = props;
+const SearchList = (props: SearchListProps) => {
+  const { query } = props;
 
-  const { isLoading, errorMsg, data, fetchListData, page, setPage } = useList();
+  const { isLoading, errorMsg, data, search, page, setPage } = useSearch();
 
   const [results, setResults] = useState<ListItem[]>(data);
 
@@ -36,9 +38,15 @@ const List = (props: ListProps) => {
   };
 
   useEffect(() => {
-    fetchListData(constructQuery(type, page));
+    search(constructQuery(query, page));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
+
+  useEffect(() => {
+    setResults([]);
+    search(constructQuery(query, 1));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [query]);
 
   useEffect(() => {
     if (data.length > 0) {
@@ -77,4 +85,4 @@ const List = (props: ListProps) => {
   );
 };
 
-export default List;
+export default SearchList;

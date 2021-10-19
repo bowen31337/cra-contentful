@@ -1,5 +1,11 @@
 import { Filter } from "../Filter";
+import { SearchBar } from "../SearchBar";
 const Home = () => {
-  return <Filter />;
+  return (
+    <>
+      <SearchBar />
+      <Filter />
+    </>
+  );
 };
 export default Home;
