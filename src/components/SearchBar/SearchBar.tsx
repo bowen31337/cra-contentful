@@ -16,8 +16,7 @@ const SearchBar = () => {
 
   const submitHandler = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('submit', inputRef.current.value)
-    setQuery(inputRef.current?.value);
+    inputRef.current && setQuery(inputRef.current?.value);
   };
 
   console.log(query);
