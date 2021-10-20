@@ -1,32 +1,37 @@
 import React from 'react'
 import { Container, Row, Col} from '../../utils/layout.styled'
-import { Contact, FooterBottom, FooterMain, LegalLinks, PhoneLink, QuickLinks, SocialMedia } from './Footer.styled'
+import { FootWrapper, Contact, FooterBottom, FooterMain, LegalLinks, PhoneLink, QuickLinks, SocialMedia } from './Footer.styled'
+import email from './assets/email.svg'
+import phone from './assets/phone.svg'
+import location from './assets/location.svg'
+import logo from './assets/logo-white.svg'
 
 const Footer = () => {
 	return (
-		<footer>
+		<FootWrapper>
 			<Container>
 				<Row>
 					<Col>
 						<FooterMain>
 							<Contact>
-								<img src="./assets/images/logo-white.svg" alt="logo" />
+								<img src={logo} alt="logo" />
 								<ul>
 									<li>
 										<p>
-											<img src="./assets/images/location.svg" alt="location"/>
-											2118 Thornridge Cir.<br/>Dubai, UAE 35624
+											<img src={location} alt="location"/>
+											<span>2118 Thornridge Cir.</span>
+											<span>Dubai, UAE 35624</span>
 										</p>
 									</li>
 									<li>
-										<PhoneLink href="tel://1300 887 062">
-											<img src="./assets/images/phone.svg" alt="phone"/>
+										<a href="tel://1300 887 062">
+											<img src={phone} alt="phone"/>
 											1300 887 062
-										</PhoneLink>
+										</a>
 									</li>
 									<li>
 										<a href="mailto:jcanonge@alteryx.com">
-											<img src="./assets/images/email.svg" alt="email" />
+											<img src={email} alt="email" />
 											jcanonge@alteryx.com
 										</a>
 									</li>
@@ -87,7 +92,7 @@ const Footer = () => {
 					</Col>
 				</Row>
 			</Container>
-		</footer>
+		</FootWrapper>
 	)
 }
 

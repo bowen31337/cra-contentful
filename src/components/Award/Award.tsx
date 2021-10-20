@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from '../../utils/layout.styled';
-import { Content, StyledImg, StyledText, Projects, StyledName, StyledNunber } from './Award.styled';
+import { AboutWrapper, StyledImg, StyledText, Projects, StyledName, StyledNunber } from './Award.styled';
 
 const Award = () => {
 
@@ -8,7 +8,7 @@ const Award = () => {
 		<Container>
 			<Row>
 				<Col>
-					<Content>
+					<AboutWrapper>
 						<StyledImg>
 							<img src="" alt="award"/>
 						</StyledImg>
@@ -30,7 +30,7 @@ const Award = () => {
 								</li>
 							</Projects>
 						</StyledText>
-					</Content>
+					</AboutWrapper>
 				</Col>
 			</Row>
 		</Container>
