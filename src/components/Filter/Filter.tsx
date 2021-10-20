@@ -1,4 +1,5 @@
 import React from "react";
+import { Container, Row, Col} from '../../utils/layout.styled'
 import { useFilter, FilterStyled } from ".";
 import { List } from "../List";
 import { uniqBy } from "../../utils";
@@ -36,19 +37,26 @@ const Filter = () => {
 
   const categories = uniqBy(data, (item) => item.category);
   return (
-    <FilterStyled>
-      <select onChange={handleChange} value={value}>
-        <option value="">All categories</option>
+    <Container>
+				<Row>
+					<Col>
+          <FilterStyled>
+            <select onChange={handleChange} value={value}>
+              <option value="">All categories</option>
 
-        {categories.map(({ category, id }) => (
-          <option key={id} value={category}>
-            {category}
-          </option>
-        ))}
-      </select>
+              {categories.map(({ category, id }) => (
+                <option key={id} value={category}>
+                  {category}
+                </option>
+              ))}
+            </select>
 
-      <List category={value} />
-    </FilterStyled>
+            <List category={value} />
+          </FilterStyled>
+        </Col>
+        </Row>
+    </Container>
+    
   );
 };
 
