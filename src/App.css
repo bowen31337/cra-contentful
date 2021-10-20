@@ -1,5 +1,407 @@
-.App {
-  text-align: center;
-  max-width: 1200px;
-  margin: 30px auto;
+/*!
+Pure v1.0.1
+Copyright 2013 Yahoo!
+Licensed under the BSD License.
+https://github.com/pure-css/pure/blob/master/LICENSE.md
+*/
+/*!
+normalize.css v^3.0 | MIT License | git.io/normalize
+Copyright (c) Nicolas Gallagher and Jonathan Neal
+*/
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 100%;
 }
+body {
+  margin: 0;
+  font-size: 18px;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: 700;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: 700;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+.hidden,
+[hidden] {
+  display: none !important;
+}
+ul {
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+.pure-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* layout css
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1134px;
+  }
+}
+
+.container {
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+.row {
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
+}
+
+.col {
+  position: relative;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+} */
+
+/*layout css*/
+
+/*header start*/
+
+header {
+  padding-top: 3rem;
+  padding-bottom: 10rem;
+  /* background-image: url("../images/header-background.png"); */
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-color: #afd4e2;
+  overflow: hidden;
+  background-size: 534px;
+}
+@media (max-width: 1280px) {
+  header {
+    background-size: 35%;
+  }
+}
+@media (max-width: 767px) {
+  header {
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    background-size: 28%;
+  }
+}
+header .header::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+header .header::before {
+  content: " ";
+  display: table;
+}
+header .header {
+  padding-bottom: 3rem;
+}
+header .header ul {
+  float: right;
+  width: 50%;
+}
+@media (max-width: 767px) {
+  header .header ul {
+    display: none;
+  }
+}
+
+header .header ul::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+header .header ul::before {
+  content: " ";
+  display: table;
+}
+header .header ul li {
+  float: left;
+  margin-right: 4.375rem;
+}
+@media (max-width: 1199px) {
+  header .header ul li {
+    margin-right: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  header .header ul li {
+    margin-right: 1rem;
+  }
+}
+header .header ul li a {
+  color: #1e3240;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.2857142;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+header .header img {
+  float: left;
+  max-width: 120px;
+  margin-top: 5px;
+}
+@media (max-width: 767px) {
+  header .header img {
+    margin-top: 13px;
+  }
+}
+header .hero h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 5.625rem;
+  line-height: 120%;
+  max-width: 680px;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #1e3240;
+}
+@media (max-width: 1199px) {
+  header .hero h1 {
+    font-size: 4.625rem;
+  }
+}
+
+@media (max-width: 992px) {
+  header .hero h1 {
+    font-size: 3.625rem;
+    max-width: 440px;
+  }
+}
+@media (max-width: 768px) {
+  header .hero h1 {
+    font-size: 2.625rem;
+  }
+}
+header .hero p {
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 120%;
+  color: #1e3240;
+  margin-bottom: 1.75rem;
+}
+
+header .header .hamburger {
+  display: none;
+  float: right;
+}
+header .header .hamburger .icon {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+header .header .hamburger .icon span {
+  width: 80%;
+  height: 1px;
+  display: block;
+  background-color: #1e3240;
+  position: absolute;
+  left: 10%;
+}
+header .header .hamburger .icon span:nth-child(1) {
+  top: 10px;
+}
+header .header .hamburger .icon span:nth-child(2) {
+  top: 20px;
+}
+header .header .hamburger .icon span:nth-child(3) {
+  top: 30px;
+}
+@media (max-width: 767px) {
+  header .header .hamburger {
+    display: block;
+  }
+}
+
+/*header end*/

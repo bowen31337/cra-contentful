@@ -1,14 +1,14 @@
 import React from 'react'
 import { Container, Row, Col} from '../../utils/layout.styled'
-import { StyledHeader } from './Header.styled'
+import { HeaderWrapper, HeaderContent } from './Header.styled'
 
 const Header = () => {
 	return (
-		<header>
+		<HeaderWrapper>
 			<Container>
 				<Row>
 					<Col>
-						<StyledHeader>
+						<HeaderContent>
 							<img src="./assets/images/LugarLogo.svg" alt="logo" />
 							<ul>
 								<li><a href="/">Home</a></li>
@@ -16,11 +16,11 @@ const Header = () => {
 								<li><a href="/projects">Projects</a></li>
 								<li><a href="/contact">Contact</a></li>
 							</ul>
-						</StyledHeader>
+						</HeaderContent>
 					</Col>
 				</Row>
 			</Container>
-		</header>
+		</HeaderWrapper>
 	)
 }
 

@@ -8,7 +8,6 @@ const Home = () => {
     <>
       <Header/>
       <main>
-        <Header/>
         <Hero/>
         {/* <Filter /> */}
         <Award/>
