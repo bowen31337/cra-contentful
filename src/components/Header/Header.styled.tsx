@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Button } from '../Button/Button.styled';
 
 
 export const HeaderWrapper = styled.header`
@@ -19,31 +20,6 @@ export const HeaderWrapper = styled.header`
 		padding-bottom: 5rem;
 		background-size: 28%;
 	}
-
-	/* & .hero h1 {
-		font-style: normal;
-		font-weight: bold;
-		font-size: 5.625rem;
-		line-height: 120%;
-		max-width: 680px;
-		margin-bottom: 0;
-		margin-top: 0;
-		color: #1e3240;
-	}
-
-	@media (max-width: 1199px) {
-		font-size: 4.625rem;
-	}
-
-	@media (max-width: 992px) {
-		font-size: 3.625rem;
-    	max-width: 440px;
-	}
-
-	@media (max-width: 768px) {
-		font-size: 2.625rem;
-	} */
-
 `;
 
 export const HeaderContent = styled.div`
@@ -108,6 +84,12 @@ export const HeaderContent = styled.div`
 			margin-top: 13px;
 		}
 	}
+`;
 
+export const StyledHero = styled.div`
+
+`;
+
+export const StyledButton = styled(Button)`
 
 `;

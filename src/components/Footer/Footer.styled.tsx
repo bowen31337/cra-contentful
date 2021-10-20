@@ -112,6 +112,3 @@ export const FooterBottom = styled.div`
 	margin-top: 100px;
 `;
 
-export const PhoneLink = styled.a`
-
-`;

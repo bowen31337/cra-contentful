@@ -1,10 +1,10 @@
 import React from 'react'
 import { Container, Row, Col} from '../../utils/layout.styled'
-import { FootWrapper, Contact, FooterBottom, FooterMain, LegalLinks, PhoneLink, QuickLinks, SocialMedia } from './Footer.styled'
-import email from './assets/email.svg'
-import phone from './assets/phone.svg'
-import location from './assets/location.svg'
-import logo from './assets/logo-white.svg'
+import { FootWrapper, Contact, FooterBottom, FooterMain, LegalLinks, QuickLinks, SocialMedia } from './Footer.styled'
+import email from '../../assets/email.svg'
+import phone from '../../assets/phone.svg'
+import location from '../../assets/location.svg'
+import logo from '../../assets/logo-white.svg'
 
 const Footer = () => {
 	return (
