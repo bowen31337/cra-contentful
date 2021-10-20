@@ -20,7 +20,7 @@ export const useList = () => {
 
       const { data }: { data: ListDataResponseProps } = await res.json();
       const {
-        dataset2Collection: { items },
+       propertyCollection: { items },
       } = data;
       setData(items);
     } catch (e: unknown) {

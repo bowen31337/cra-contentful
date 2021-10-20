@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
 export const FilterStyled = styled.section`
-  border-top: 1px solid #333;
+  display:flex;
+  flex-direction: column;
+  select {
+    align-self: flex-end;
+  }
 `;

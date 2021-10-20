@@ -1,11 +1,11 @@
 
 
 export interface FilterResponseProps {
-  dataset2Collection: { items: FilterType[]};
+    propertyCollection: { items: FilterType[]};
 
 }
 
 export interface FilterType {
-    type: string;
+    category: string;
     id: string;
 }

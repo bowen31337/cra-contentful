@@ -17,7 +17,7 @@ export const useFilter = (query: string) => {
 
       const { data }: { data: FilterResponseProps } = await res.json();
       const {
-        dataset2Collection: { items },
+       propertyCollection: { items },
       } = data;
       setData(items);
     } catch (e: unknown) {

@@ -1,20 +1,19 @@
-import { useList, ListProps, ListItem } from ".";
+import { useList, ListProps, ListItem, ListStyled } from ".";
 import { Card } from "../Card";
-import "./List.styles.css";
 import { CONSTANTS } from "../../utils";
 import { useEffect, useState } from "react";
 
-const constructQuery = (type: string, page: number = 1) => `
+const constructQuery = (category: string, page: number = 1) => `
 {
-    dataset2Collection(limit: ${CONSTANTS.PAGE_SIZE}, skip: ${
+   propertyCollection(limit: ${CONSTANTS.PAGE_SIZE}, skip: ${
   (page - 1) * CONSTANTS.PAGE_SIZE
 }, where:{
-      type: "${type}"
+      category_contains: "${category}"
     }) {
       items{
-        type,
+        category,
         title,
-        description,
+        address,
         id,
         image {
          url
@@ -25,7 +24,7 @@ const constructQuery = (type: string, page: number = 1) => `
 `;
 
 const List = (props: ListProps) => {
-  const { type } = props;
+  const { category } = props;
 
   const { isLoading, errorMsg, data, fetchListData, page, setPage } = useList();
 
@@ -36,7 +35,15 @@ const List = (props: ListProps) => {
   };
 
   useEffect(() => {
-    fetchListData(constructQuery(type, page));
+    setResults([]);
+    fetchListData(constructQuery(category, 1));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [category]);
+
+  useEffect(() => {
+    if (page > 1) {
+      fetchListData(constructQuery(category, page));
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
@@ -48,11 +55,11 @@ const List = (props: ListProps) => {
 
   return (
     <section className="list-wrapper">
-      <ul>
+      <ListStyled>
         {results.map(({ id, ...other }) => (
-          <li key={id}>
+          <li key={`${id}`}>
             <Card
-              description={other.description}
+              address={other.address}
               id={id}
               title={other.title}
               url={
@@ -63,7 +70,7 @@ const List = (props: ListProps) => {
             />
           </li>
         ))}
-      </ul>
+      </ListStyled>
 
       {isLoading ? (
         <p>Loading...</p>

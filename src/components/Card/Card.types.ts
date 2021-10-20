@@ -1,6 +1,6 @@
 export interface CardProps {
     title:string;
-    description:string;
+    address:string;
     url: string;
     id:string;    
 }

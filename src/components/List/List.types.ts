@@ -1,15 +1,15 @@
 export interface ListProps {
-  type: string;
+  category: string;
 }
 
 export interface ListDataResponseProps {
-  dataset2Collection: { items: ListItem[] };
+  propertyCollection: { items: ListItem[] };
 }
 
 export interface ListItem {
-  type: string;
+  category: string;
   title: string;
-  description: string;
+  address: string;
   id: string;
   image: {
     url: string;

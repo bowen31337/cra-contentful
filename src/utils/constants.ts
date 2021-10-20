@@ -1,3 +1,3 @@
 export const CONSTANTS = {
-    PAGE_SIZE: 5
+    PAGE_SIZE: 3
 }
