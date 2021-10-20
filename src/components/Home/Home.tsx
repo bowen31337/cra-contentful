@@ -2,7 +2,7 @@ import { Filter } from "../Filter";
 const Home = () => {
   return (
     <>
-      {/* <Filter /> */}
+      <Filter />
     </>
   );
 };
