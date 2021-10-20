@@ -1,7 +1,6 @@
 import React from 'react'
 import { Container, Row, Col} from '../../utils/layout.styled'
-import { Button } from '../Button/Button.styled'
-import { StyledHero } from './Hero.styled'
+import { StyledHero, StyledButton } from './Hero.styled'
 
 const Hero = () => {
 
@@ -13,8 +12,9 @@ const Hero = () => {
 						<StyledHero>
 							<h1>A home is built with love and dreams</h1>
 							<p>Real estate farm that makes your dreams true.</p>
-							<Button primary>Our projects</Button>
-							<Button>Contact us</Button>
+
+							<StyledButton primary>Our projects</StyledButton>
+							<StyledButton>Contact us</StyledButton>
 						</StyledHero>
 					</Col>
 				</Row>
