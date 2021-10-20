@@ -1,7 +1,6 @@
 import React from 'react'
 import { Container, Row, Col} from '../../utils/layout.styled'
-import { Hero, StyledHeader } from './Header.styled'
-import { Button } from '../Button/Button.styled'
+import { StyledHeader } from './Header.styled'
 
 const Header = () => {
 	return (
@@ -18,12 +17,6 @@ const Header = () => {
 								<li><a href="/contact">Contact</a></li>
 							</ul>
 						</StyledHeader>
-						<Hero>
-							<h1>A home is built with love and dreams</h1>
-							<p>Real estate farm that makes your dreams true.</p>
-							<Button primary>Our projects</Button>
-							<Button>Contact us</Button>
-						</Hero>
 					</Col>
 				</Row>
 			</Container>
