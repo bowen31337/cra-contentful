@@ -1,24 +1,25 @@
+# General info
+
+This is a responsive single page application that used semantic HTML and CSS3. It also used Bosstrap5 as a reference for the breakpoints. 
 
 
-# Features
+# Technologies
 
 - Contentful GraphQL API
 - Typescript
-- Customer Hooks and Unit tests
-- Scaffolded by CRA
-- Proxy in DEV Mode
-- React Routes
+- Style Component
+- Customer Hooks
+- Unit tests
 
 
-# Pre-Requirement
+# Setup
 
-- SetUp Contentful SpaceID and Access_token [doc](https://www.contentful.com/developers/docs/javascript/tutorials/getting-started-with-react-and-contentful/)
-- replace the ENV in .env and .env.development
-
-
-
-# Contentful GraphQL playground
-
-[PlayGround](https://graphql.contentful.com/content/v1/spaces/aruge8pbp38v/explore?access_token=tWXR2BsswcwN6OGfcLWZFeyXT5EYcFDfcYnw-BxeU0g)
+Download the repository
+`cd cra-contentful`
+  `npm i`
+  `npm start`
 
 
+# Limits
+
+Due to the time limitation, some features are not built on this website such as mobile burger menu (nav menu), animation or web accessibility.
