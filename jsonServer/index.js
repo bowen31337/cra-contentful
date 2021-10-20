@@ -8,7 +8,7 @@ const data = require('./data.json')
 server.use(middlewares)
 
 // Add custom routes before JSON Server router
-server.post('/content', (req, res) => {
+server.post('/content/:version/:spaces/:vyvd54sdd5jment', (req, res) => {
   res.json(data.content);
 })
 

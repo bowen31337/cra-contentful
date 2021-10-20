@@ -8,7 +8,8 @@ module.exports = function(app) {
       changeOrigin: true,
       secure: false,
       pathRewrite: {
-        '^/content/v1/spaces/vyvd54sdd5jm': '/content', // rewrite path
+        '^/content': '/content', // rewrite path
+        // '^/content/v1/spaces/vyvd54sdd5jm': '/content', // rewrite path
       },
       router: {
         // when request.headers.host == 'localhost:3000',
