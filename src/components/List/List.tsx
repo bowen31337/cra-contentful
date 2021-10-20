@@ -2,6 +2,7 @@ import { useList, ListProps, ListItem, ListStyled } from ".";
 import { Card } from "../Card";
 import { CONSTANTS } from "../../utils";
 import { useEffect, useState } from "react";
+import { Button } from '../Button/Button.styled';
 
 const constructQuery = (category: string, page: number = 1) => `
 {
@@ -77,7 +78,7 @@ const List = (props: ListProps) => {
       ) : data.length === 0 ? (
         <p>no more data found</p>
       ) : (
-        <button onClick={loadMore}>Load more</button>
+        <Button primary onClick={loadMore}>Load more</Button>
       )}
       {errorMsg !== "" && <p>{errorMsg}</p>}
     </section>
