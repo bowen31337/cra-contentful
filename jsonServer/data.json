@@ -1,0 +1,65 @@
+{
+  "content": {
+    "data": {
+      "propertyCollection": {
+        "total": 6,
+        "items": [
+          {
+            "id": 2935,
+            "title": "Vintage Villa",
+            "address": "2715 Ash Dr. San Jose, Dubai",
+            "category": "Villa",
+            "image": {
+              "url": "https://images.ctfassets.net/vyvd54sdd5jm/4E74Re6chPLewwUJ1dmR8j/6cdc1f369c02074c64860122f18274de/vintage-villa.png"
+            }
+          },
+          {
+            "id": 7231,
+            "title": "Tonga Villa",
+            "address": "1901 Thornridge Cir. Shiloh 81063",
+            "category": "Villa",
+            "image": {
+              "url": "https://images.ctfassets.net/vyvd54sdd5jm/5vzuelZRWA0p1IQMZvoORN/4f0665904e5fadfa84910ddebe670d0b/tonga-villa.png"
+            }
+          },
+          {
+            "id": 6256,
+            "title": "Penthouse",
+            "address": "2464 Royal Ln. Mesa, 45463",
+            "category": "Penthouse",
+            "image": {
+              "url": "https://images.ctfassets.net/vyvd54sdd5jm/6aM9pJuQIDsOtznCZ1W4yG/7c54c0970bc6262a7294eafdddf01f78/penthouse.png"
+            }
+          },
+          {
+            "id": 2341,
+            "title": "2 bed Apartment",
+            "address": "Dubai Sports City, Dubai",
+            "category": "Apartment",
+            "image": {
+              "url": "https://images.ctfassets.net/vyvd54sdd5jm/3xJG0gtw65w98tyUxMBmdb/6566e8a0aa60fad5da080d8a106b9245/dubai-sports-city.png"
+            }
+          },
+          {
+            "id": 5231,
+            "title": "Bel Air House",
+            "address": "4112, Bel Air, Malibu Bay, Dubai",
+            "category": "House",
+            "image": {
+              "url": "https://images.ctfassets.net/vyvd54sdd5jm/6yoo2x2IDdxGE4a5sDKChi/a65a0f7b23a7173cf494500b0a28ec2e/bel-air-house.png"
+            }
+          },
+          {
+            "id": 4924,
+            "title": "Luxury House",
+            "address": "Palm Jumeirah, Dubai",
+            "category": "House",
+            "image": {
+              "url": "https://images.ctfassets.net/vyvd54sdd5jm/1wU5Py1kmsrrZ0Tz3zD0jK/26fc04b903994d77df43988847b696ea/luxury-house.png"
+            }
+          }
+        ]
+      }
+    }
+  }
+}
